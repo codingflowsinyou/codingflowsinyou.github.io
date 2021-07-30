@@ -1,6 +1,6 @@
 ---
 layout: post
-title: You're up and running!
+title: First blog post
 published: true
 ---
 # This is your first blog with Jenkyll
