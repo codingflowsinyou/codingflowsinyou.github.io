@@ -50,28 +50,16 @@
     </div>
 
     {% include analytics.html %}-->
-    <!-- Uses a transparent header that draws on top of the layout's background -->
-    <style>
-    .demo-layout-transparent {
-      background: url('https://raw.githubusercontent.com/codingflowsinyou/codingflowsinyou.github.io/master/images/page_header.png') center / cover;
-    }
-    .demo-layout-transparent .mdl-layout__header,
-    .demo-layout-transparent .mdl-layout__drawer-button {
-      /* This background is dark, so we set text to white. Use 87% black instead if
-         your background is light. */
-      color: white;
-    }
-    </style>
-
-    <div class="demo-layout-transparent mdl-layout mdl-js-layout">
-      <header class="mdl-layout__header mdl-layout__header--transparent">
+    <!-- Always shows a header, even in smaller screens. -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
         <div class="mdl-layout__header-row">
           <!-- Title -->
           <span class="mdl-layout-title">Title</span>
           <!-- Add spacer, to align navigation to the right -->
           <div class="mdl-layout-spacer"></div>
-          <!-- Navigation -->
-          <nav class="mdl-navigation">
+          <!-- Navigation. We hide it in small screens. -->
+          <nav class="mdl-navigation mdl-layout--large-screen-only">
             <a class="mdl-navigation__link" href="">Link</a>
             <a class="mdl-navigation__link" href="">Link</a>
             <a class="mdl-navigation__link" href="">Link</a>
@@ -89,6 +77,7 @@
         </nav>
       </div>
       <main class="mdl-layout__content">
+        <div class="page-content"><!-- Your content goes here --></div>
       </main>
     </div>
   </body>
