@@ -18,12 +18,13 @@ window.onload = function () {
     var maxLevel = 3;
     var entry = document.getElementsByClassName('entry')[0];
 	
-	alert(entry.innerHTML);
+    alert(entry.innerHTML);
 
     entry.innerHTML =
         entry.innerHTML.replace(
             /<h([\d])>([^<]+)<\/h([\d])>/gi,
             function (str, openLevel, titleText, closeLevel) {
+		    alert(str);
                 if (openLevel != closeLevel) {
 				 c.log(openLevel)
                     return str + ' - ' + openLevel;
