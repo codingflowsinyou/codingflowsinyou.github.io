@@ -17,8 +17,6 @@ window.onload = function () {
     var level = 0;
     var maxLevel = 3;
     var entry = document.getElementsByClassName('entry')[0];
-	
-    alert(entry.innerHTML);
 
     entry.innerHTML =
         entry.innerHTML.replace(
