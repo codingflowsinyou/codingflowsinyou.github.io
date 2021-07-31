@@ -12,6 +12,7 @@ var c = function() {
 }();
 
 window.onload = function () {
+	alert("hola");
     var toc = "";
     var level = 0;
     var maxLevel = 3;
