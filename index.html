@@ -1,20 +1,6 @@
 ---
 layout: default
 ---
-<!-- Wide card with share menu button -->
-<style>
-.demo-card-wide.mdl-card {
-  width: 512px;
-}
-.demo-card-wide > .mdl-card__title {
-  color: #fff;
-  height: 176px;
-  background: url('https://getmdl.io//assets/demos/welcome_card.jpg') center / cover;
-}
-.demo-card-wide > .mdl-card__menu {
-  color: #fff;
-}
-</style>
 <div class="posts">
   {% for post in site.posts %}
   <div class="demo-card-wide mdl-card mdl-shadow--2dp">
@@ -36,15 +22,5 @@ layout: default
       </button>
     </div>
   </div>
-  <!--<article class="post">
-
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
-
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>-->
   {% endfor %}
 </div>
