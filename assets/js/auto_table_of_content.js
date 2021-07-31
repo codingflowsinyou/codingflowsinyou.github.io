@@ -1,31 +1,52 @@
-// Get ToC div
-toc = document.getElementById("ToC");
-//Add a header
-/*tocHeader = document.createElement("h2");
-tocHeader.innerText="Table of contents";
-toc.appendChild(tocHeader);
- // Get the h3 tags — ToC entries
- headers = document.getElementsByTagName("h3");
+
+var c = function() {
+    return({
+        log: function(msg) {
+          consoleDiv = document.getElementById('console');
+          para = document.createElement('p');
+          text = document.createTextNode(msg);
+          para.appendChild(text);
+          consoleDiv.appendChild(para);
+        }
+    });
+}();
+
+window.onload = function () {
+    var toc = "";
+    var level = 0;
+    var maxLevel = 3;
  
- // For each h3
- for (i = 0; i < headers.length; i++){
- 
-   // Create an id
-   name = "h"+i;
-   headers[i].id=name;
- 
-   // a list item for the entry
-   tocListItem = document.createElement("li");
-  
-   // a link for the h3
-   tocEntry = document.createElement("a");
-   tocEntry.setAttribute("href","#"+name);
-   tocEntry.innerText=headers[i].innerText;
-   tocListItem.appendChild(tocEntry);
-   tocList.appendChild(tocListItem);
- }
- toc.appendChild(tocList); 
- 
- // Create a list for the ToC entries 
- tocList = document.createElement("ul");
-*/
+    var entry = document.getElementsByClassName('entry')[0];
+
+    entry.innerHTML =
+        entry.innerHTML.replace(
+            /<h([\d])>([^<]+)<\/h([\d])>/gi,
+            function (str, openLevel, titleText, closeLevel) {
+                if (openLevel != closeLevel) {
+				 c.log(openLevel)
+                    return str + ' - ' + openLevel;
+                }
+
+                if (openLevel > level) {
+                    toc += (new Array(openLevel - level + 1)).join("<ol>");
+                } else if (openLevel < level) {
+                    toc += (new Array(level - openLevel + 1)).join("</ol>");
+                }
+
+                level = parseInt(openLevel);
+
+                var anchor = titleText.replace(/ /g, "_");
+                toc += "<li><a href=\"#" + anchor + "\">" + titleText
+                    + "</a></li>";
+
+                return "<h" + openLevel + "><a name=\"" + anchor + "\">"
+                    + titleText + "</a></h" + closeLevel + ">";
+            }
+        );
+
+    if (level) {
+        toc += (new Array(level + 1)).join("</ol>");
+    }
+
+    document.getElementById("toc").innerHTML += toc;
+};
