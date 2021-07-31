@@ -1,7 +1,7 @@
 // Get ToC div
 toc = document.getElementById("ToC");
 //Add a header
-tocHeader = document.createElement("h2");
+/*tocHeader = document.createElement("h2");
 tocHeader.innerText="Table of contents";
 toc.appendChild(tocHeader);
  // Get the h3 tags — ToC entries
@@ -28,3 +28,4 @@ toc.appendChild(tocHeader);
  
  // Create a list for the ToC entries 
  tocList = document.createElement("ul");
+*/
