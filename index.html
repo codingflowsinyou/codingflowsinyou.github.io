@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<div class="posts">
+<div class="posts mdl-grid portfolio-max-width" >
   {% for post in site.posts %}
   <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
       <div class="mdl-card__media">
@@ -11,8 +11,8 @@ layout: default
           <h2 class="mdl-card__title-text">{{ post.title }}</h2>
       </div>
       <div class="mdl-card__supporting-text">
-          {{ post.excerpt }}
-      </div>
+          {{ post.excerpt }
+       </div>
       <div class="mdl-card__actions mdl-card--border">
           <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="{{ site.baseurl }}{{ post.url }}">Read more</a>
       </div>
