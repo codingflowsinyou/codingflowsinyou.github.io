@@ -561,6 +561,3 @@ df.withColumn('new_id', fn.monotonically_increasing_id()).show()
 
 
 
-```python
-
-```
