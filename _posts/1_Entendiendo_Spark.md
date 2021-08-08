@@ -1,3 +1,10 @@
+---
+layout: post
+title: Entendiendo Spark - parte 1
+image: https://raw.githubusercontent.com/codingflowsinyou/codingflowsinyou.github.io/master/assets/img/posts/2021-07-31-My-First-Post/spark.jpeg
+published: true
+---
+
 ## Introducción
 
 Apache Spark es un motor open-source originalmente desarrollado por **Matei Zaharia** como parte de su tesis en UC Berkeley. La primera versión de Spark fue lanzada en 2012. Desde entonces, en 2013, Zaharia se convirtió en el CTO de Databricks; también fue profesor en Stanford. Al mismo tiempo fue donado a *Apache Software Foundation (^)* y se ha convertido en su proyecto emblemático, de ahí nació *Apache Spark*.
