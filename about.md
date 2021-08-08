@@ -4,12 +4,8 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
-
-### More Information
-
-A place to include any other types of information that you'd like to include about yourself.
+Mi nombre es Lidia, soy matemática y un intento de friki de la programación. Considero que programar y estructurar el código bien es un arte que se puede ir aprendiendo y perfeccionando con el tiempo. Me gusta adentrarme de manera profunda en los lenguajes y poder compartirlo. Si tenéis alguna sugerencia tema podéis contactarme sin problemas :)
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+lidiacerdanorts@gmail.com
