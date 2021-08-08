@@ -78,6 +78,6 @@ Cada driver program tiene una web, tipicamente en el puerto 4040, que muestra la
 Spark brinda un control sobre la asignación de recursos en las aplicaciones. + info en https://spark.apache.org/docs/latest/job-scheduling.html
 
 Un Spark Job está asociado con una cadena de dependencias organizada por el **DAG (direct acyclic graph)**. Por ejemplo, Spark puede optimizar la organización (por ejemplo: determinar el número de tasks y workers requeridos) y la ejecución de estas tasks. Visualmente:
-<img src="https://raw.githubusercontent.com/codingflowsinyou/codingflowsinyou.github.io/master/assets/img/posts/2021-08-07-Entendiendo-Spark-parte-1/DAG2.png">
+<img src="https://raw.githubusercontent.com/codingflowsinyou/codingflowsinyou.github.io/master/assets/img/posts/2021-08-07-Entendiendo-Spark-parte-1/DAG2.PNG">
 (source y + info: https://data-flair.training/blogs/dag-in-apache-spark/)
 
