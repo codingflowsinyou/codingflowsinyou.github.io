@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Entendiendo Spark - parte 1
-image: https://raw.githubusercontent.com/codingflowsinyou/codingflowsinyou.github.io/master/assets/img/posts/2021-07-31-My-First-Post/spark.jpeg
+image: https://raw.githubusercontent.com/codingflowsinyou/codingflowsinyou.github.io/master/assets/img/posts/2021-08-07-Entendiendo-Spark-parte-1/ecosistema_spark.PNG
 published: true
 ---
 
@@ -28,7 +28,7 @@ La función map toma los archivos almacenados en el HDFS, y crea varios conjunto
 
 (*) HDFS: Hadoop Distributed File System, es el sistema de ficheros distribuido de Hadoop. El calificativo «distribuido» expresa la característica más significativa de este sistema de ficheros, la cual es su capacidad para almacenar los archivos en un clúster de varias máquinas.
 
-<img src="ecosistema_spark.png">
+<img src="https://raw.githubusercontent.com/codingflowsinyou/codingflowsinyou.github.io/master/assets/img/posts/2021-08-07-Entendiendo-Spark-parte-1/ecosistema_spark.PNG">
 
 (source: Apache is the smartphone of Big Data https://insidebigdata.com/2015/11/09/apache-spark-is-the-smartphone-of-big-data/) 
 Artículo interesante con dos claves básicas: mejoró el coste computacional trabajando en memoria RAM en vez de en disco & se centró en el tratamiento de los datos y no en la tecnología.
