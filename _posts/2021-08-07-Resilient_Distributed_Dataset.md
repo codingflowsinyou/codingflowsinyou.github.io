@@ -1,3 +1,9 @@
+---
+layout: post
+title: Resilient Distributed Datasets
+published: true
+---
+
 # Resilient Distributed Datasets
 RDDs son unas colecciones de objetos JVM inmutables que te permiten hacer calculos muy rápidos. Son la columna vertebral de Apache Spark.
 
