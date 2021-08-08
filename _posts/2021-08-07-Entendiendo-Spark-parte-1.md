@@ -53,7 +53,7 @@ Artículo interesante con dos claves básicas: mejoró el coste computacional tr
 Las aplicaciones de Spark se ejecutan en procesos independientes dentro de un cluster, coordinados por el `SparkContext` en el `main program` (también llamado driver program).
 
 Especificamente, para runnear un cluster, SparkContext puede conectarse con varios tipos de clusters managers, los cuales asignan recursos entre aplicaciones. Una vez conectados, Spark adquiere executors en nodos en el clustes, los cuales son procesos que ejecutan cálculos y almacenan datos para tus aplicaciones. Lo siguiente, envía el código de tus aplicaciones (definido en JAR o en Python pasado al SparkContext) a los executors. Por último, SparkContext envía tareas que los executors las ejecuten.
-<img src="cluster_spark.png">
+<img src="https://raw.githubusercontent.com/codingflowsinyou/codingflowsinyou.github.io/master/assets/img/posts/2021-08-07-Entendiendo-Spark-parte-1/cluster_spark.png">
 
 Hay varias cosas útiles que remarcar sobre esta arquitectura:
 1. Cada aplicación tiene su propio proceso de executors, los cuales permanecen activos durante toda la aplicación y runnean tasks en subprocesos. Esto permite aislar las aplicaciones unas de otras, tanto en el lado del scheduling (cada driver programa sus propias tasks) como en el lado de los executors (tareas de diferentes aplicaciones se ejecutan en diferentes JVMs). Sin embargo, esto significa que los datos no pueden compartirse a través de diferentes aplicaciones de Spark sin escribirlos en un sistema de almacenamiento externo.
@@ -78,10 +78,6 @@ Cada driver program tiene una web, tipicamente en el puerto 4040, que muestra la
 Spark brinda un control sobre la asignación de recursos en las aplicaciones. + info en https://spark.apache.org/docs/latest/job-scheduling.html
 
 Un Spark Job está asociado con una cadena de dependencias organizada por el **DAG (direct acyclic graph)**. Por ejemplo, Spark puede optimizar la organización (por ejemplo: determinar el número de tasks y workers requeridos) y la ejecución de estas tasks. Visualmente:
-<img src="DAG2.png">
+<img src="https://raw.githubusercontent.com/codingflowsinyou/codingflowsinyou.github.io/master/assets/img/posts/2021-08-07-Entendiendo-Spark-parte-1/DAG2.png">
 (source y + info: https://data-flair.training/blogs/dag-in-apache-spark/)
 
-
-```python
-
-```
